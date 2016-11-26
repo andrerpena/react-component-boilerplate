@@ -1,6 +1,6 @@
 # react-component-boilerplate
 
-A dead simple and little opinionated template for creating react-components that will be published to NPM.
+ > A dead simple and template for creating react-components that will be published to NPM. This is not a template for react apps, it's for components.
 
 ## Features
 
