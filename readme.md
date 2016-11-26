@@ -34,7 +34,12 @@ A dead simple and little opinionated template for creating react-components that
  - `npm start`: Starts the demo
  - `npm run publsh`: Creates a `lib` folder containing what is going to be published to NPM.
 
- ## Publishing to NPM
+## Publishing to NPM
 
   - `npm-adduser` // will let you create a user / login
   - `npm-publish` // will deploy your binaries to `npmjs.org`.
+
+## File structure:
+
+ - `demo`: Contains the demo. The `server.js` is what is triggered when you type `npm start`
+ - `src`: Contains the source code of your awesome component. `index.js` is the entry point of your library.

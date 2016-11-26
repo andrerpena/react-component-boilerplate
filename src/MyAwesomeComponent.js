@@ -4,7 +4,8 @@ class MyAwesomeComponent extends Component {
     render() {
         return (
             <div>
-                <button type="submit">Submit 2</button>
+                <h1>I'm an awesome component</h1>
+                <p>No I'm not... Make an awesome component of me</p>
             </div>
         );
     }
