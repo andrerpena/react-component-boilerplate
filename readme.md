@@ -18,14 +18,14 @@ A dead simple and little opinionated template for creating react-components that
  - No Routing
  - No Testing
  
- ## Using
+## Using
 
-  - Create a GitHub repo for your awesome component
-  - Clone the boilerplate -> `git clone https://github.com/andrerpena/react-component-boilerplate.git `
-  - Copy its contents to the folder of your awesome component
-  - Open the `package.json` file and change these properties: `name`, `version`, `description`, `repository.url`, `author`, `bugs.url` and `homepage`.
-  - Set `NODE_ENV` to developoment and `npm install`.
-  - Commit and push your awesome component
+ - Create a GitHub repo for your awesome component
+ - Clone the boilerplate -> `git clone https://github.com/andrerpena/react-component-boilerplate.git `
+ - Copy its contents to the folder of your awesome component
+ - Open the `package.json` file and change these properties: `name`, `version`, `description`, `repository.url`, `author`, `bugs.url` and `homepage`.
+ - Set `NODE_ENV` to developoment and `npm install`.
+ - Commit and push your awesome component
 
 *I know you can clone the boilerplate directly to directory of your component and change the remote but let's keep it simple.
 
