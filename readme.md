@@ -74,14 +74,14 @@ Create a `test` folder
 
 Example test file:
 
-  var assert = require('assert');
-  describe('Array', function() {
-    describe('#indexOf()', function() {
-      it('should return -1 when the value is not present', function() {
-        assert.equal(-1, [1,2,3].indexOf(4));
+    var assert = require('assert');
+    describe('Array', function() {
+      describe('#indexOf()', function() {
+        it('should return -1 when the value is not present', function() {
+          assert.equal(-1, [1,2,3].indexOf(4));
+        });
       });
     });
-  });
 
   Add this script to your `readme.md` file:
 
