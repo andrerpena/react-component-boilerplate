@@ -1,3 +1,19 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [react-component-boilerplate](#react-component-boilerplate)
+  - [Features](#features)
+  - [Non-Features, pick your own...](#non-features-pick-your-own)
+  - [Using](#using)
+  - [Commands](#commands)
+  - [Publishing to NPM](#publishing-to-npm)
+  - [File structure:](#file-structure)
+  - [Adding tests](#adding-tests)
+    - [Mocha](#mocha)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # react-component-boilerplate
 
  > A dead simple and template for creating react-components that will be published to NPM. This is not a template for react apps, it's for components.
@@ -43,3 +59,30 @@
 
  - `demo`: Contains the demo. The `server.js` is what is triggered when you type `npm start`
  - `src`: Contains the source code of your awesome component. `index.js` is the entry point of your library.
+
+## Adding tests
+
+### Mocha
+
+Install Mocha
+
+ > npm install mocha chai --save-dev
+
+Create a `test` folder
+
+ Add a test file in the `test` folder ending with `Spec.js`. Example: `ArraySpec.js` 
+
+Example test file:
+
+  var assert = require('assert');
+  describe('Array', function() {
+    describe('#indexOf()', function() {
+      it('should return -1 when the value is not present', function() {
+        assert.equal(-1, [1,2,3].indexOf(4));
+      });
+    });
+  });
+
+  Add this script to your `readme.md` file:
+
+  > "test": "mocha --timeout 15000 --compilers js:babel-register ./test/*Spec.js"
