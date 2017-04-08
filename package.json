@@ -53,6 +53,6 @@
   "homepage": "https://github.com/andrerpena/react-component-boilerplate#readme",
   "dependencies": {
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.5.1"
   }
 }
