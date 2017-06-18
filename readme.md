@@ -14,9 +14,9 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# react-component-boilerplate
+# react-ts-component-boilerplate
 
- > A dead simple and template for creating react-components that will be published to NPM. This is not a template for react apps, it's for components.
+ > A dead simple and template for creating TypeScript React components that will be published to NPM. This is not a template for react apps, it's just for components.
 
 ## Features
 
