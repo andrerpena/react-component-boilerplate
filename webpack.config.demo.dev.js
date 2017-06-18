@@ -1,17 +1,16 @@
-import webpack from 'webpack';
+var webpack = require('webpack');
 
-export default {
+module.exports = {
 
     entry: [
-        'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
-        'babel-polyfill',
-        './demo/client.js'
+        'react-hot-loader/patch',
+        './demo/client.tsx'
     ],
 
     output: {
         filename: 'bundle.js',
         path: '/',
-        publicPath: '/'
+        publicPath: 'http://localhost:8080/'
     },
 
     externals: undefined,
@@ -19,20 +18,16 @@ export default {
     devtool: 'source-map',
 
     resolve: {
-        extensions: ['', '.js', '.json']
+        extensions: ['.js', '.jsx', '.json', '.ts', '.tsx']
     },
 
     module: {
-        loaders: [
-            { test: /\.js/, loaders: ['babel'], exclude: /node_modules/ },
-            { test: /\.jsx/, loaders: ['babel'], exclude: /node_modules/ },
-            { test: /\.css/, loader: 'style-loader!css-loader' },
-            { test: /\.less$/, loader: 'style!css!less' },
-            { test: /\.scss$/, loader: 'style!css!sass'},
-            { test: /\.json$/, loader: 'json' },
-            { test: /\.jpe?g$|\.gif$|\.png$|\.ico$/, loader: 'file?name=[name].[ext]' },
-            { test: /\.eot|\.ttf|\.svg|\.woff2?/, loader: 'file?name=[name].[ext]' },
-            { test: /\.txt/, loader: 'raw' }
+        rules: [
+            { test: /\.ts|\.tsx/, use: ['react-hot-loader/webpack', 'awesome-typescript-loader'] },
+            { test: /\.css/, use: ['style-loader', 'css-loader'] },
+            { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
+            { test: /\.jpe?g$|\.gif$|\.png$|\.ico$/, use: ['file-loader?name=[name].[ext]'] },
+            { test: /\.eot|\.ttf|\.svg|\.woff2?/, use: ['file-loader?name=[name].[ext]'] }
         ]
     },
 
@@ -47,7 +42,10 @@ export default {
         })
     ],
 
-    stats: {
-        colors: true
+    devServer: {
+        port: 8080,
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        }
     }
 };
